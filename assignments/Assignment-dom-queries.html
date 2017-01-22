@@ -1,0 +1,98 @@
+<html>
+<style type="text/css">
+
+	table {
+		
+	}
+
+	td {
+		height: 50px;
+		width: 50px;
+		border: 1px solid;
+	}
+
+   
+</style>
+<body>
+	<div id="example">Inside Content</div>
+	<div id="content">
+		<table>
+			<tr class="row1">
+				<td>1</td>
+				<td>2</td>
+				<td id="first">3</td>
+				<td class="last-column">4</td>
+			</tr>
+			<tr class="row2">
+				<td>5</td>
+				<td id="third">6</td>
+				<td>7</td>
+				<td class="last-column">8</td>
+			</tr>
+			<tr class="row-a">
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td class="last-column">12</td>
+			</tr>
+			<tr id="last-row" class="row-b">
+				<td>13</td>
+				<td id="last">14</td>
+				<td>15</td>
+				<td class="last-column">16</td>
+			</tr>
+		</table>
+	</div>
+<p>
+Please select the following and output it's results using console.log(). Once you select the element console.log() the element object. When asked for the value also console.log() the value of the element using the innerHTML property. An example of both is provided in the console.
+</p>
+
+<p>APIs you will use in this Assignment:</p>
+<ol>
+	<li>getElementById</li>
+	<li>getElementsByClassName</li>
+	<li>querySelector</li>
+	<li>querySelectorAll</li>
+</ol>
+
+
+<p>Not using querySelector or querySelectorAll:</p>
+<ol>
+	<li>An element with the ID of "last-row". Also output the value of this element</li>
+	<li>Select the elements with that have the Class of "last-column"</li>
+</ol>
+
+<p>Using the querySelector or querySelectorAll:</p>
+<ol>
+	<li>Select elements that have both the Class of "last-row" and "row2". Be careful what order you select the classes in</li>
+	<li>Select the element with the ID of "last". Also output the value of this element</li>
+	<li>Select the element that is the "Table" element</li>
+</ol>
+
+<p>Output:</p>
+<img src="imgs/Assignment-dom-queries-output.png" />
+</p>
+</body>
+
+
+<script type="text/javascript">
+var exampleEl = document.getElementById('example');
+console.log(exampleEl);
+console.log(exampleEl.innerHTML);
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
