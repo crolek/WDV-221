@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project - Forms Instructions</title>
+
+</head>
+<body>
+    <h1>Project - Forms Instructions</h1>
+
+    <p>The goal of this project is to learn how to validate a form with plain JS.</p>
+    <p><a href="./Project-Forms-Template.html">I created an HTML form for you to use to complete this project.</a></p>
+
+    <p>The form <strong>does not have to Submit to any location.</strong> It just needs to console.log() the resulting data.</p>
+    <p>The result object that you console.log() should be structured like: </p>
+    <pre>
+    {
+        "firstName": "Stewie",
+        "email": "lilsquiggle@gmail.com",
+        "message": "Something goes here",
+        "gender": "male"
+    }
+    </pre>
+    <p>The exact keys of "firstName", "email", "message", and "gender" have to be used for the object that you console.log().</p>
+
+    <p>
+        There are 4 different input types on the page and each needs to be validated before the form can "submit" (aka, console.log() the results).
+        You can validate the fields on blur or all at once when the user clicks the "submit" button.
+    </p>
+    <p>
+        If the field is not valid (like the First Name field) you should display an appropriate message in the error-box.
+        The message could be "First Name field is incorrect, it can only have letters.". You must have a unique error
+        message per field. <br />
+        The error messages should go in the div with the class of "error-box".
+    </p>
+
+    <p>
+        <strong>Hint:<br /></strong>
+        You will have to use the event.preventDefault() function inside your event handler to complete this project.
+        Reference the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault">preventDefault api.</a>
+    </p>
+
+    <br />
+    <h3>Field Validation Rules</h3>
+    <p>Name:</p>
+    <ol>
+        <li>It cannot be empty</li>
+        <li>It cannot have any numbers in it</li>
+        <li>It can have a dash in it</li>
+    </ol>
+
+    <br />
+    <p>Email:</p>
+    <ol>
+        <li>It cannot be empty</li>
+        <li>It must have the @ symbol in it</li>
+        <li>It must have at least 1 period in it on the right side of the @ symbol</li>
+    </ol>
+
+    <br />
+    <p>Message:</p>
+    <ol>
+        <li>It cannot be empty</li>
+        <li>It must have more than 3 characters in it</li>
+    </ol>
+
+    <br />
+    <p>Gender:</p>
+    <ol>
+        <li>One of the radios must be selected</li>
+    </ol>
+
+
+
+
+</body>
+</html>

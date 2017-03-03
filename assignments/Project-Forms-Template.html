@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project - Forms - Template</title>
+
+    <link rel="stylesheet" href="../libs/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="../libs/Skeleton-2.0.4/css/skeleton.css">
+    <style type="text/css">
+        body {
+            background: #f7f7f7;
+        }
+
+        .form-box {
+            max-width: 500px;
+            margin: auto;
+            padding: 50px;
+            background: #ffffff;
+            border: 10px solid #f2f2f2;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        .text-inputs {
+            width: 100%;
+        }
+
+        .error-box {
+            border: red 1px solid;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- sourced from: https://codepen.io/formbucket/pen/wzwyGx -->
+    <div class="form-box">
+        <h1>Simple Signup Form</h1>
+        <div class="error-box hidden">asdfads</div>
+        <form action="/" method="post">
+            <label for="firstname">First Name</label>
+            <input id="firstname" type="text" name="firstname" class="text-inputs">
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="Email" class="text-inputs">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" class="text-inputs"></textarea>
+
+            <label>Gender</label>
+            <label for="male">
+                <input type="radio" name="gender" id="male" value="male"/>
+                <span class="label-body">Male</span>
+            </label>
+            <label for="female">
+                <input type="radio" name="gender" id="female" value="male" />
+                <span class="label-body">Female</span>
+            </label>
+
+
+            <input class="button-primary" type="submit" value="Submit" id="submit"/>
+        </form>
+    </div>
+
+</body>
+</html>
