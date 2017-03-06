@@ -9,7 +9,7 @@
     <h1>Project - Forms Instructions</h1>
 
     <p>The goal of this project is to learn how to validate a form with plain JS.</p>
-    <p><a href="./Project-Forms-Template.html">I created an HTML form for you to use to complete this project.</a></p>
+    <p><a href="http://crolek.github.io/WDV-221/assignments/Project-Forms-Template.html">I created an HTML form for you to use to complete this project.</a></p>
 
     <p>The form <strong>does not have to Submit to any location.</strong> It just needs to console.log() the resulting data.</p>
     <p>The result object that you console.log() should be structured like: </p>
@@ -25,13 +25,16 @@
 
     <p>
         There are 4 different input types on the page and each needs to be validated before the form can "submit" (aka, console.log() the results).
-        You can validate the fields on blur or all at once when the user clicks the "submit" button.
+        You can validate the individual fields on a blur event, or all at once when the user clicks the "submit" button.
     </p>
+
     <p>
         If the field is not valid (like the First Name field) you should display an appropriate message in the error-box.
-        The message could be "First Name field is incorrect, it can only have letters.". You must have a unique error
-        message per field. <br />
+        The message could be "First Name field is incorrect, it can only have letters.". You must have <strong>an unique error
+        message per field.</strong> <br />
         The error messages should go in the div with the class of "error-box".
+        <br />
+        Error messages should disappear when the field becomes a valid field.
     </p>
 
     <p>
