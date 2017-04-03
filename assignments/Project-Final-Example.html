@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project - Final - Example</title>
+
+    <link rel="stylesheet" href="https://crolek.github.io/WDV-221/libs/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="https://crolek.github.io/WDV-221/libs/Skeleton-2.0.4/css/skeleton.css">
+    <style type="text/css">
+        body {
+            background: #f7f7f7;
+        }
+
+        #final {
+            max-width: 500px;
+            margin: auto;
+            padding: 50px;
+            background: #ffffff;
+            border: 10px solid #f2f2f2;
+        }
+
+        .single-image {
+            height: 100%;
+            width: 100%;
+        }
+
+        #image-wrapper {
+            height: 500px;
+            width: 500px;
+        }
+
+        .error-box {
+            border: red 1px solid;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="final">
+        <div id="image-wrapper">
+        </div>
+        <div class="control-wrapper">
+            <button id="prevous-button">Previous</button>
+            <button id="next-button">Next</button>
+        </div>
+        <div id="error-wrapper" class="error-box hidden">
+            <p>Make sure the New Image URL is valid.</p>
+        </div>
+        <div>
+            <label for="new-image">New Image:</label>
+            <input type="text" id="new-image" value="http://pbs.twimg.com/profile_images/554344612832092160/WRLmixCH_400x400.png"/>
+            <button id="add-new-image">Add New Image</button>
+        </div>
+    </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/final.min.js"></script>
+
+<script type="text/javascript">
+
+
+</script>
+</html>
