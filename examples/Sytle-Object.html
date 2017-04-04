@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style Object</title>
+
+    <style type="text/css">
+
+        #box-wrapper > div {
+            border: black 1px solid;
+            margin: 10px;
+            float: left;
+        }
+
+        .red-border {
+            border: red 10px solid !important;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .square-box {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box-wrapper">
+    <div id="box1" class='red-border' style="width: 300px; height:500px;">
+        Box 1
+    </div>
+    <div id="box2" style="width: 100px; height:200px;">
+        Box 2
+    </div>
+    <div id="box3" class="square-box">
+        Box 3
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+    var box1 = document.querySelector('#box1');
+    var box2 = document.querySelector('#box2');
+    var box3 = document.querySelector('#box3');
+
+</script>
+</html>

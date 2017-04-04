@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Changer</title>
+
+    <style type="text/css">
+        #image-wrapper img {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-wrapper">
+        <img src="../assignments/imgs/final/garden.jpg" />
+    </div>
+    <div id="button-wrapper">
+        <button id="change-image">Change</button>
+    </div>
+</body>
+<script type="text/javascript">
+    var images= ['../assignments/imgs/final/garden.jpg', '../assignments/imgs/final/lilsquiggle.jpg'];
+
+    var changeImageButton = document.querySelector('#change-image');
+    var imageWrapper = document.querySelector('#image-wrapper');
+
+    changeImageButton.addEventListener('click', function(){
+        console.log('i clicked');
+
+        console.log('the image::', images[1]);
+        var image = document.querySelector('img');
+        image.src = images[1];
+    });
+
+</script>
+</html>
