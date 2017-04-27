@@ -1,0 +1,89 @@
+<html>
+<style type="text/css">
+
+
+</style>
+<body>
+    <h1>This</h1>
+
+
+    <div id="this">
+        <p>See Console</p>
+        <button id="see-this">See This</button>
+    </div>
+
+</body>
+
+
+<script type="text/javascript">
+
+    var globalThis = this;
+
+    var HelperObject = {
+        someDefaultVariable: 'with some default text',
+        printTo5: function() {
+            console.log('before the loop: ', this);
+            for(var i = 1; i <= 5; i++) {
+                console.log('the original loop: ', this);
+            }
+
+        }
+    };
+
+
+    document.querySelector('#see-this').addEventListener('click', function(){
+        console.log('global this: ', globalThis);
+        console.log('inside event: ', this);
+
+        HelperObject.printTo5();
+    })
+
+
+/*
+    var HelperObject = {
+        someDefaultVariable: 'with some default text',
+        init: function(){
+            console.log('Init-ing stuff');
+            console.log('default value: ', this.someDefaultVariable);
+            this.bindAllEvents();
+        },
+        bindAllEvents: function() {
+            this.bindButtonOnClick();
+        },
+        bindButtonOnClick: function() {
+            var me = this;
+            document.querySelector('#see-this').addEventListener('click', function(){
+                console.log('me: ', me);
+                console.log('inside event: ', this);
+
+                me.printTo5();
+            });
+        },
+        printTo5: function() {
+            console.log('before the loop: ', this);
+            for(var i = 1; i <= 5; i++) {
+                console.log('THis for the number: ' + i + ': ', this);
+            }
+
+        }
+    };
+    HelperObject.init();
+*/
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
