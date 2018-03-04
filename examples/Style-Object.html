@@ -46,5 +46,27 @@
     var box2 = document.querySelector('#box2');
     var box3 = document.querySelector('#box3');
 
+
+    // make background red
+    //box1.style += "background-color: red;";
+    box1.style.backgroundColor = 'green';
+    // this will overrite the values already in the style object.
+    box2.style.width = "50px";
+
+    // comment out everything and do this one. This will replace the whole style object (not classes)
+    // the other directly accessed functions set individual properties on the style object.
+    box1.style = "color: blue;";
+
+    // add a class to square-box (box3)
+    // this will append the class to the element (keeping the original)
+    box3.className += " red-border"
+
+    // this will append the class to the element but it'll be missing a space, so it'll smash the class names together
+    // this means both class names get invalidated. Little things like this will cause headaches when working outside
+    // of a js library.
+    //box3.className += "red-border"
+
+    // will add a class and purge the original classes (so square-box should not be there anymore)
+    //box3.className = "red-border"
 </script>
 </html>
