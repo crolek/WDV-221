@@ -6,8 +6,9 @@
 <body>
 <div id="content">
     <!-- use default values to make it so you don't hav eto type each time -->
-    <input text="text" id="input" value="lilsquiggle@sherpa.com" />
-    <button id="calculate"></button>
+    <input text="text" id="email" value="lilsquiggle@sherpa.com" />
+    <input text="text" id="year" value="2016" />
+    <button id="validate">Validate</button>
 </div>
 
 
@@ -16,42 +17,75 @@
 <script type="text/javascript">
 
     // check for @ sign
-    var validateAtSign = function(inputElement) {
-        var atSignPosition = inputElement.value.indexOf('@');
+    var validateAtSign = function(emailElement) {
+        var atSignPosition = emailElement.value.indexOf('@');
         console.log('atSignPosition: ', atSignPosition);
         if (atSignPosition > 0) {
             console.log('There is an @ sign');
+            return true;
         } else {
             console.log('There is NOT an @ sign');
+            return false;
         }
 
     }
 
-    var validatePeriod = function(inputElement) {
+    var validatePeriod = function(emailElement) {
         // check for period after @
-        var atSignPosition = inputElement.value.indexOf('@');
-        var periodPosition = inputElement.value.indexOf('.');
+        var atSignPosition = emailElement.value.indexOf('@');
+        var periodPosition = emailElement.value.indexOf('.');
 
         console.log('periodPosition: ', periodPosition);
         if (periodPosition > 0 && periodPosition > atSignPosition) {
             console.log('the period was after the @ sign');
+            return true;
         } else {
             console.log('the period was BEFORE the @ sign');
+            return false;
+        }
+    }
+
+    var validateYear = function(yearElement) {
+        var year = yearElement.value
+
+        // isNaN stands for is_not_a_number
+        if (isNaN(year)) {
+            console.log('year isNaN: ', year);
+            return false;
+        } else {
+            console.log('year is not a NaN ..... so it\'s a valid number: ', year);
+            return true;
+        }
+    }
+
+    var validateYearRegex = function(yearElement) {
+        var year = yearElement.value;
+        if (year.match(/^\d{4}$/)) {
+            console.log('year is valid via REGEX');
+            return true;
+        } else {
+            console.log('year is NOT valid via REGEX');
         }
     }
 
 
     var validateInputs = function(eventInfo) {
-        var inputElement = document.querySelector('#input');
+        // read the data from the inputs each time the button is clicked. That way its fresh each time.
+        var emailElement = document.querySelector('#email');
+        var yearElement = document.querySelector('#year');
         console.log('eventInfo: ', eventInfo);
 
-        validateAtSign(inputElement);
-        validatePeriod(inputElement);
+        // individual validate functions. This helps conslidate the logic to individual chunks.
+        // there is some intentional duplication between the @ sign and the . checks.
+        validateAtSign(emailElement);
+        validatePeriod(emailElement);
+        validateYear(yearElement)
+        validateYearRegex(yearElement);
     }
 
     // bind click event to make testing inputs easier
-    var calculateButton = document.querySelector('#calculate');
-    calculateButton.addEventListener('click', validateInputs);
+    var validateButton = document.querySelector('#validate');
+    validateButton.addEventListener('click', validateInputs);
 </script>
 </html>
 
