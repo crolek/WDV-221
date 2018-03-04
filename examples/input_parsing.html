@@ -1,0 +1,70 @@
+<html>
+<style type="text/css">
+
+
+</style>
+<body>
+<div id="content">
+    <!-- use default values to make it so you don't hav eto type each time -->
+    <input text="text" id="input" value="lilsquiggle@sherpa.com" />
+    <button id="calculate"></button>
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+
+    // check for @ sign
+    var validateAtSign = function(inputElement) {
+        var atSignPosition = inputElement.value.indexOf('@');
+        console.log('atSignPosition: ', atSignPosition);
+        if (atSignPosition > 0) {
+            console.log('There is an @ sign');
+        } else {
+            console.log('There is NOT an @ sign');
+        }
+
+    }
+
+    var validatePeriod = function(inputElement) {
+        // check for period after @
+        var atSignPosition = inputElement.value.indexOf('@');
+        var periodPosition = inputElement.value.indexOf('.');
+
+        console.log('periodPosition: ', periodPosition);
+        if (periodPosition > 0 && periodPosition > atSignPosition) {
+            console.log('the period was after the @ sign');
+        } else {
+            console.log('the period was BEFORE the @ sign');
+        }
+    }
+
+
+    var validateInputs = function(eventInfo) {
+        var inputElement = document.querySelector('#input');
+        console.log('eventInfo: ', eventInfo);
+
+        validateAtSign(inputElement);
+        validatePeriod(inputElement);
+    }
+
+    // bind click event to make testing inputs easier
+    var calculateButton = document.querySelector('#calculate');
+    calculateButton.addEventListener('click', validateInputs);
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
